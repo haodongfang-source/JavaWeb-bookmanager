@@ -4,6 +4,7 @@ import java.util.List;
 
 /**
  * Page是分页的模型对象
+ *
  * @param <T> 是具体的JavaBean类
  */
 public class Page<T> {
@@ -37,6 +38,11 @@ public class Page<T> {
     }
 
     public void setPageNo(Integer pageNo) {
+        if (pageNo < 1) {
+            pageNo = 1;
+        } else if (pageNo > pageTotal) {
+            pageNo = pageTotal;
+        }
         this.pageNo = pageNo;
     }
 
