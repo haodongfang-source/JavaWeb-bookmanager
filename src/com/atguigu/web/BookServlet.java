@@ -1,6 +1,7 @@
 package com.atguigu.web;
 
 import com.atguigu.pojo.Book;
+import com.atguigu.pojo.Page;
 import com.atguigu.service.BookService;
 import com.atguigu.service.impl.BookServiceImpl;
 import com.atguigu.utils.WebUtils;
@@ -14,6 +15,26 @@ import java.util.List;
 public class BookServlet extends BaseServlet{
 
     private BookService bookService = new BookServiceImpl();
+
+    /**
+     * 处理分页功能
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
+//    protected void page(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//        // 1. 获取请求参数pageNO和pageSize
+//        int pageNo = WebUtils.parseInt(req.getParameter("pageNo"),1);
+//        int pageSize = WebUtils.parseInt(req.getParameter("pageSize"), Page.PAGE_SIZE);
+//        //2 调用 BookService.page(pageNo，pageSize)：Page 对象
+//        BookService.page(pageNo,pageSize);
+//        //3 保存 Page 对象到 Request 域中
+//
+//        //4 请求转发到 pages/manager/book_manager.jsp 页面
+//
+//    }
+
 
     protected void add(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
