@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class Page<T> {
 
-    public static final Integer PAGE_SIZE = 2;
+    public static final Integer PAGE_SIZE = 4;
     // 当前页码
     private Integer pageNo;
     // 总页码
@@ -20,19 +20,23 @@ public class Page<T> {
     // 当前页数据
     private List<T> items;
 
-    private String url;
+
+//    public void setPageNo(Integer pageNo) {
+////        // 数据有效边境检查 此处可能会导致nullpointerexception
+////        if (pageNo<1) {
+////            pageNo=1;
+////        } else if (pageNo > pageTotal) {
+////            pageNo = pageTotal;
+////        }
+//        this.pageNo = pageNo;
+//    }
+
 
     public Integer getPageNo() {
         return pageNo;
     }
 
     public void setPageNo(Integer pageNo) {
-        // 数据有效边境检查
-        if (pageNo<1) {
-            pageNo=1;
-        } else if (pageNo > pageTotal) {
-            pageNo = pageTotal;
-        }
         this.pageNo = pageNo;
     }
 
@@ -77,9 +81,5 @@ public class Page<T> {
                 ", PageTotalCount=" + PageTotalCount +
                 ", items=" + items +
                 '}';
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
     }
 }

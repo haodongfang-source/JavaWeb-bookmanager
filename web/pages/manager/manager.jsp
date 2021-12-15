@@ -23,6 +23,7 @@
 			<span class="wel_word">后台管理系统</span>
 
 		<%-- 静态包含 manager管理模块的菜单  --%>
+<%--	manager_menu.jsp	-> list.jsp   manger_menu.jsp -> page.jsp--%>
 		<%@include file="/pages/common/manager_menu.jsp"%>
 
 

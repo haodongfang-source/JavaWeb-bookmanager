@@ -18,5 +18,5 @@ public interface BookService {
 
     public List<Book> queryBooks();
 
-
+    Page<Book> page(int pageNo, int pageSize);
 }
