@@ -78,9 +78,8 @@
 
 </div>
 
-<%--&lt;%&ndash;静态包含分页条&ndash;%&gt;--%>
-<%--<%@include file="/pages/common/page_nav.jsp"%>--%>
-
+<%--静态包含分页条--%>
+<%@include file="/pages/common/page_nav.jsp"%>
 
 
 </div>

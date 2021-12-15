@@ -20,9 +20,16 @@ public class Page<T> {
     private Integer PageTotalCount;
     // 当前页数据
     private List<T> items;
+    private String url;
 
+    public String getUrl() {
+        return url;
+    }
 
-//    public void setPageNo(Integer pageNo) {
+    public void setUrl(String url) {
+        this.url = url;
+    }
+    //    public void setPageNo(Integer pageNo) {
 ////        // 数据有效边境检查 此处可能会导致nullpointerexception
 ////        if (pageNo<1) {
 ////            pageNo=1;
