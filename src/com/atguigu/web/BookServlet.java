@@ -32,7 +32,7 @@ public class BookServlet extends BaseServlet{
         //3 保存 Page 对象到 Request 域中
         req.setAttribute("page",page);
         //4 请求转发到 pages/manager/book_manager.jsp 页面 -> list.jsp manger -> page.jsp
-        req.getRequestDispatcher("/pages/manger/book_manager.jsp").forward(req,resp);
+        req.getRequestDispatcher("/pages/manager/book_manager.jsp").forward(req,resp);
     }
 
 
